@@ -51,9 +51,9 @@ export async function runWakeup() {
     ],
   })
 
-  if (isCancel(mode || mode === "exit")) {
+  if (isCancel(mode) || mode === 'exit') {
     console.log(chalk.dim('\n Goodbye. \n'));
-    return;
+    process.exit(0);
   }
 
   if (mode === 'cli') {

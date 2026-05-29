@@ -18,6 +18,7 @@ export async function runCliMode() {
     if(isCancel(mode) || mode === 'back') {
       console.log(chalk.dim('\n Returning to main menu... \n'));
       await runWakeup();
+      return;
     }
 
     if(mode === 'agent') {
